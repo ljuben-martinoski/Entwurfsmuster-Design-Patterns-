@@ -2,7 +2,7 @@
 # erstellen klass model mit constructor init
 class Model:
     def __init__(self):
-        self.data  = "Hello World" # initializing a variable mit der name .data
+        self.data = "Hello World"  # initializing a variable mit der name .data
 
     def set_data(self, value):
         self.data = value
@@ -15,9 +15,11 @@ class Model:
 #  erstellen class View 
 class View:
     # erstellen method display_message mit parameter message
-    def display_message(self,message):
+    def display_message(self, message):
         print(f"Anzeige: {message}") 
-# erstellen ein method get_user_input das habe kine parameter und nehmt input vom Benutzer. 
+# erstellen ein method get_user_input das habe 
+# kine parameter und nehmt input vom Benutzer. 
+
     def get_user_input(self):
         return input("Gib einen neuen Text ein: ")
     
