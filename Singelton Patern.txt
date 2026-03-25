@@ -1,0 +1,13 @@
+"""
+Singeltone patern bedeutet das es nur eine instanz von einer klasse geben kann
+Es stellt sicher, dass von einer bestimmten Klasse nur eine einzige Instanz(ein Objekt) exisitiert.
+Egal wie oft du versuchts, ein neues Objekt zu erstellen, du bekommst immmer wieder dasseöbe züruck."""
+
+Wann sollte man es nutzen?
+Vorteil                                                    Nachteil   
+Ressourcen sparen: Spart Speicher 
+(z. B. bei Datenbanken).                              Globaler Zustand: Es ist wie eine globale Variable, 
+                                                        was das Testen erschweren kann.
+Konsistenz: Alle Programmteile greifen 
+auf dieselben Daten zu.                                Abhängigkeiten: Man sieht oft nicht sofort, 
+                                                            welche Klasse das Singleton heimlich nutzt.

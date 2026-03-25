@@ -1,0 +1,15 @@
+Stell dir vor, du arbeitest in einer Pizzeria. 
+Wenn ein Kunde eine Pizza bestellt, könntest du jedes Mal manuell in der Küche stehen und entscheiden: 
+„Okay, für Salami brauche ich Teig, Käse und Salami. 
+Für Hawaii brauche ich Teig, Käse und Ananas.“
+
+Das Factory Pattern (Fabrikmuster) ist wie ein Bestell-Counter. 
+Du sagst dem Counter einfach nur: 
+„Ich hätte gerne Salami“, und die Factory kümmert sich um die Details der Erstellung. 
+Du musst nicht wissen, wie die Pizza im Hintergrund zusammengebaut wird.
+
+Das Problem (Ohne Factory)
+Hier muss der „Kunde“ (dein Hauptprogramm) genau wissen, 
+welche Klassen es gibt und wie man sie erstellt. Das wird schnell unübersichtlich.
+# Mühsam: Wir müssen jedes Mal wissen, welche Klasse wir aufrufen
+pizza1 = SalamiPizza()
