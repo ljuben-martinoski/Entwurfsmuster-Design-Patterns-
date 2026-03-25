@@ -15,6 +15,7 @@ class PizzaFactory:
     def erstelle_pizza(typ):
         if typ == "Salami":
             return SalamiPizza()
+            
         elif typ == "Hawaii":
             return HawaiiPizza()
         else:
@@ -23,7 +24,8 @@ class PizzaFactory:
 
 # Nutzung durch der Anfänger (Der Kunde)
 bestellung = "Hawaii"
-"""# erstellen eine var. meine pizza,wo wir setzen die factory mit die funktion 
+
+""" erstellen eine var. meine pizza,wo wir setzen die factory mit die funktion 
 erstelle piza und bestellung als perimeter/argument."""
 meine_pizza = PizzaFactory.erstelle_pizza(bestellung)
 

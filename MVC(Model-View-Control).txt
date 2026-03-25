@@ -1,0 +1,13 @@
+Das MVC-Konzept (Model-View-Controller) klingt am Anfang oft komplizierter, 
+als es eigentlich ist. Stell dir das Ganze wie in einem Restaurant vor:
+
+Model (Die Küche): 
+Hier werden die Daten verarbeitet und gespeichert. 
+Die Küche weiß, wie man das Essen macht, sieht aber den Gast nicht.
+
+View (Die Speisekarte & der Teller): 
+Das ist das, was der Gast sieht. Schön angerichtet, aber ohne Logik, wie man kocht.
+
+Controller (Der Kellner): 
+Er nimmt die Bestellung auf, 
+gibt sie an die Küche weiter und bringt das fertige Essen zum Gast.

@@ -13,3 +13,12 @@ Hier muss der „Kunde“ (dein Hauptprogramm) genau wissen,
 welche Klassen es gibt und wie man sie erstellt. Das wird schnell unübersichtlich.
 # Mühsam: Wir müssen jedes Mal wissen, welche Klasse wir aufrufen
 pizza1 = SalamiPizza()
+
+Warum macht man das?
+Zentralisierung: Wenn sich das Rezept für die Salami-Pizza ändert, 
+musst du es nur an einer Stelle im Code anpassen, nicht überall dort, wo Pizzen bestellt werden.
+
+Einfachheit: Der Benutzer des Codes muss nicht wissen, dass es eine Klasse SalamiPizza gibt. 
+Er muss nur das Wort "Salami" kennen.
+
+Ordnung: Dein Hauptcode bleibt sauber („Clean Code“), weil die Logik der Objekterstellung ausgelagert ist.

@@ -1,0 +1,8 @@
+ Strukturmuster (Structural Patterns)
+Diese Muster helfen dabei, 
+Klassen und Objekte zu strukturieren, 
+z. B. durch sinnvolle Kombination oder durch Vereinfachung von Schnittstellen.
+
+Hier sind :
+-FAcade
+-MVC(Model-Context-View)
