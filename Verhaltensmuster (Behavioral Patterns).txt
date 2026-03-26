@@ -1,0 +1,100 @@
+Verhaltensmuster (Behavioral Patterns) in der Softwareentwicklung sind wie Rezepte, die beschreiben, 
+wie Objekte und Klassen miteinander kommunizieren. 
+Sie sorgen dafür, dass dein Code flexibel bleibt und nicht im Chaos versinkt.
+
+1. Das Strategy Pattern (Die Strategie)
+Stell dir vor, du baust ein Spiel. 
+Dein Charakter kann verschiedene Waffen benutzen. 
+Statt riesige if-else-Blöcke zu schreiben, lagerst du das Verhalten in "Strategien" aus.
+
+Das Problem (Schlechter Code)
+Python
+class Held:
+    def angreifen(self, waffe):
+        if waffe == "Schwert":
+            print("Schlägt mit dem Schwert zu!")
+        elif waffe == "Bogen":
+            print("Schießt einen Pfeil ab!")
+
+
+
+Die Lösung (Strategy Pattern)
+Wir definieren für jede Aktion eine eigene kleine Klasse.
+
+Python
+# Die verschiedenen Strategien
+class SchwertKampf:
+    def ausfuehren(self):
+        print("Schlägt mit dem Schwert zu!")
+
+class BogenSchiessen:
+    def ausfuehren(self):
+        print("Schießt einen Pfeil ab!")
+
+# Der Held nutzt einfach die Strategie, die man ihm gibt
+class Held:
+    def __init__(self, strategie):
+        self.strategie = strategie
+
+    def angreifen(self):
+        self.strategie.ausfuehren()
+
+# Anwendung
+ritter = Held(SchwertKampf())
+ritter.angreifen() # Output: Schlägt mit dem Schwert zu!
+
+jaeger = Held(BogenSchiessen())
+jaeger.angreifen() # Output: Schießt einen Pfeil ab!
+Vorteil: Du kannst neue Waffen hinzufügen, ohne den Code der Klasse Held jemals wieder anzupassen.
+
+2. Das Observer Pattern (Der Beobachter)
+Dieses Muster ist perfekt für Benachrichtigungen. 
+Ein Objekt (das "Subjekt") gibt Bescheid, wenn sich etwas ändert, 
+und alle "Beobachter" reagieren darauf. 
+Denk an einen YouTube-Kanal und seine Abonnenten.
+
+Beispiel in Python
+Python
+class YoutubeKanal:
+    def __init__(self):
+        self.abonnenten = []
+
+    def abonnieren(self, user):
+        self.abonnenten.append(user)
+
+    def video_hochladen(self, titel):
+        print(f"Lade Video hoch: {titel}")
+        for user in self.abonnenten:
+            user.benachrichtigen(titel)
+
+class Abonnent:
+    def __init__(self, name):
+        self.name = name
+
+    def benachrichtigen(self, titel):
+        print(f"Hallo {self.name}, neues Video online: {titel}")
+
+# Anwendung
+kanal = YoutubeKanal()
+user1 = Abonnent("Lukas")
+user2 = Abonnent("Sarah")
+
+kanal.abonnieren(user1)
+kanal.abonnieren(user2)
+
+kanal.video_hochladen("Python für Anfänger")
+Warum sollte man das nutzen?
+Wiederverwendbarkeit: Du musst das Rad nicht jedes Mal neu erfinden.
+
+Ordnung: 
+Dein Code wird modularer. 
+Wenn ein Fehler im "BogenSchiessen" ist, 
+musst du nicht den ganzen "Helden" durchsuchen.
+
+Erweiterbarkeit: 
+Du kannst neue Funktionen hinzufügen, ohne bestehende Funktionen kaputt zu machen.
+
+Wichtiger Hinweis: 
+Übertreibe es am Anfang nicht! 
+Muster sind Werkzeuge, keine Gesetze. 
+Nutze sie nur, wenn der Code sonst zu kompliziert ("Spaghetti-Code") wird.
