@@ -1,6 +1,6 @@
 # Entwurfsmuster — Mein Lernprojekt 🧠
 
-Hey! Das hier ist mein persönliches Projekt, in dem ich **Design Patterns** (auf Deutsch: Entwurfsmuster) lerne.
+Hey! Das hier ist mein persönliches Projekt, in dem ich **Design Patterns** (auf Deutsch: Entwurfsmuster) lerne..
 
 Design Patterns sind keine Bibliotheken oder Frameworks — es sind einfach **clevere Lösungsideen**, die schlaue Entwickler über die Jahre gesammelt haben. Statt jedes Problem neu zu erfinden, nutzt man ein bewährtes Muster.
 
